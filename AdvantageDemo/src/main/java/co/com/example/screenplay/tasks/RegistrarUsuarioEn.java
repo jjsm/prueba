@@ -30,9 +30,8 @@ public class RegistrarUsuarioEn implements Task {
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-        utilidadTiempo.esperar(2);
         actor.attemptsTo(
-            MoveMouse.to(BTN_PERFILUSUARIO),
+            WaitUntil.the(BTN_PERFILUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
             Click.on(BTN_PERFILUSUARIO),
              WaitUntil.the(BTN_REGISTRARUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
             MoveMouse.to(BTN_REGISTRARUSUARIO),

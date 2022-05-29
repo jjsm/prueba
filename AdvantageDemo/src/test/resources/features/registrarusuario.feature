@@ -20,8 +20,8 @@ Feature: Registrar Usuario
         | <username> |
 
       Examples:
-        | username | email           | password | confirm_password | first_name | last_name | phone_number | city | address | state | postal_code |
-        | username2 | email@email.com | Jjsm606  | Jjsm606          | first_name | last_name | phone_number | city | address | state | 1234567890  |
+        | username  | email           | password | confirm_password | first_name | last_name | phone_number | city     | address        | state     | postal_code |
+        | username4 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Medellin | Transversal 38 | antioquia | 1234567890  |
 
 
 
