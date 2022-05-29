@@ -10,4 +10,20 @@ public class RegistroUsuarioPage {
 
     public static final Target SLT_COUNTRY = Target.the("campo para ingresar el pais ").located(By.xpath("//body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]"));
 
+    public static final String TXT_USERNAME ="usernameRegisterPage";
+    public static final String  TXT_EMAIL= "emailRegisterPage";
+    public static final String  TXT_PASWORD= "passwordRegisterPage";
+    public static final String  TXT_CONFIRM_PASSWORD ="confirm_passwordRegisterPage";
+    public static final String  TXT_FISRT_NAME ="first_nameRegisterPage";
+    public static final String TXT_LAST_NAME ="last_nameRegisterPage";
+    public static final String TXT_PHONE_NUMBER = "phone_numberRegisterPage";
+    public static final String TXT_CITY = "cityRegisterPage";
+    public static final String TXT_ADDRES  = "addressRegisterPage";
+    public static final String TXT_STATE ="state_/_province_/_regionRegisterPage";
+    public static final String TXT_POSTAL_CODE = "postal_codeRegisterPage";
+    public static final String RBT_AGREE = "i_agree";
+
+    public static final String BTN_REGISTRAR= "register_btnundefined";
+
+
 }

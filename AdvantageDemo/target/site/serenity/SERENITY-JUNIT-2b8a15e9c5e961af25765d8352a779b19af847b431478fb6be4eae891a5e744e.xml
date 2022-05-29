@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Registrar Usuario" skipped="0" tests="1" time="80.84" timestamp="2022-05-29 11:02:21"><testcase name="Registrar Usuario"><failure message="&#13;&#10;Expected: an element that is not empty&#13;&#10;     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []" type="java.lang.AssertionError">&#13;
-Expected: an element that is not empty&#13;
-     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []</failure><system-err>&#13;
-Expected: an element that is not empty&#13;
-     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Registrar Usuario" skipped="0" tests="1" time="43.8" timestamp="2022-05-29 02:34:05"><testcase name="Registrar Usuario"><error message="Cannot locate option with text: Colombia&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'CHMEPPF0FNLK0', ip: '192.168.0.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">Cannot locate option with text: Colombia
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'CHMEPPF0FNLK0', ip: '192.168.0.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: unknown</error><system-err>Cannot locate option with text: Colombia
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'CHMEPPF0FNLK0', ip: '192.168.0.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: driver.version: unknown&#13;
 co.com.example.screenplay.tasks.RegistrarUsuarioEn.performAs(RegistrarUsuarioEn.java:24)&#13;
 co.com.example.screenplay.stepdefinitions.registrarusuario.RegistrarUsuarioStepDefinitions.necesitaHacerUnaCompraParaRegistrarse(RegistrarUsuarioStepDefinitions.java:23)&#13;
 io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
