@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Registrar Usuario" skipped="0" tests="1" time="80.84" timestamp="2022-05-29 11:02:21"><testcase name="Registrar Usuario"><failure message="&#13;&#10;Expected: an element that is not empty&#13;&#10;     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []" type="java.lang.AssertionError">&#13;
+Expected: an element that is not empty&#13;
+     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []</failure><system-err>&#13;
+Expected: an element that is not empty&#13;
+     but: the element identified by [[ChromeDriver: chrome on WINDOWS (aed31f417e56018e11af069183559417)] -&gt; xpath: //body/div[3]/section[1]/article[1]/sec-form[1]/div[1]/div[2]/div[1]/div[3]/div[1]/sec-view[1]/div[1]/select[1]] []&#13;
+co.com.example.screenplay.tasks.RegistrarUsuarioEn.performAs(RegistrarUsuarioEn.java:24)&#13;
+co.com.example.screenplay.stepdefinitions.registrarusuario.RegistrarUsuarioStepDefinitions.necesitaHacerUnaCompraParaRegistrarse(RegistrarUsuarioStepDefinitions.java:23)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:86)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:57)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:95)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$3(CucumberExecutionContext.java:151)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:151)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:58)&#13;
+</system-err></testcase></testsuite>
