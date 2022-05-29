@@ -1,4 +1,4 @@
-package util;
+package co.com.example.screenplay.util;
 
 import org.awaitility.Awaitility;
 

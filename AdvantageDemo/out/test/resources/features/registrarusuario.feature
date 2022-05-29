@@ -10,9 +10,19 @@ Feature: Registrar Usuario
   Rule: Registrar el usuario con todos los campos requeridos
 
 
-    Scenario: Registrar Usuario
+    Scenario Outline: Registrar Usuario
       Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra para registrarse
+        | username   | email   | password   | confirm_password   | first_name   | last_name   | phone_number   | city   | address   | state   | postal_code   |
+        | <username> | <email> | <password> | <confirm_password> | <first_name> | <last_name> | <phone_number> | <city> | <address> | <state> | <postal_code> |
       Then el sistema termina de hacer su registro
+        | username   |
+        | <username> |
+
+      Examples:
+        | username | email           | password | confirm_password | first_name | last_name | phone_number | city | address | state | postal_code |
+        | username2 | email@email.com | Jjsm606  | Jjsm606          | first_name | last_name | phone_number | city | address | state | 1234567890  |
+
+
 
 
