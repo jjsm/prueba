@@ -20,5 +20,5 @@ Feature: Ingresar Usuario Registrado
         | <username> |
 
       Examples:
-        | username  | password |
-        | username6 | Jjsm606  |
+        | username    | password |
+        | username100 | Jjsm606  |

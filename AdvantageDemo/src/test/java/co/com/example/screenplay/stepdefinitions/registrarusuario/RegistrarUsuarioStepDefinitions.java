@@ -9,6 +9,8 @@ import co.com.example.screenplay.tasks.RegistrarUsuarioEn;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_NO_REGISTRADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 
@@ -35,7 +37,7 @@ public class RegistrarUsuarioStepDefinitions {
     @Then("^el sistema termina de hacer su registro$")
     public void elSistemaTerminaDeHacerSuRegistro(List<String> message)  {
         theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_REGISTRADO),
-                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, "Usuario no registrado correctamente"));
+                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_REGISTRADO));
 
     }
 

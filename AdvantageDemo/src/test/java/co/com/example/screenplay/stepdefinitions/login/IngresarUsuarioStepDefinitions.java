@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
+import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_NO_INGRESADO;
 import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_REGISTRADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -25,7 +26,7 @@ public class IngresarUsuarioStepDefinitions {
     @Then("^el sistema valida el ingreso exitoso$")
     public void elSistemaValidaElIngresoExitoso(List<String> message)  {
         theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_REGISTRADO),
-                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, "No se ingreso correctamente"));
+                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_INGRESADO));
 
     }
 

@@ -17,6 +17,7 @@ import co.com.example.screenplay.util.utilidadTiempo;
 
 import java.util.List;
 
+import static co.com.example.screenplay.userinterfaces.IngresarCarritoPage.BTN_CART;
 import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
@@ -46,7 +47,9 @@ public class RegistrarUsuarioEn implements Task {
             Enter.theValue(usuario.get(0).getFirst_name()).into(InputField.withNameOrId(TXT_LAST_NAME)),
             Enter.theValue(usuario.get(0).getPhone_number()).into(InputField.withNameOrId(TXT_PHONE_NUMBER)),
             Click.on(SLT_COUNTRY),
-            //SelectFromOptions.byVisibleText(usuario.get(0).getCountry()).from(SLT_COUNTRY),
+            WaitUntil.the(SLT_COUNTRY, isNotEmpty()).forNoMoreThan(60).seconds(),
+            Click.on(SLT_COUNTRY),
+            SelectFromOptions.byVisibleText(usuario.get(0).getCountry()).from(SLT_COUNTRY),
             Enter.theValue(usuario.get(0).getCity()).into(InputField.withNameOrId(TXT_CITY)),
             Enter.theValue(usuario.get(0).getAddress()).into(InputField.withNameOrId(TXT_ADDRES)),
             Enter.theValue(usuario.get(0).getState()).into(InputField.withNameOrId(TXT_STATE)),
@@ -55,6 +58,8 @@ public class RegistrarUsuarioEn implements Task {
             Click.on(Button.withNameOrId(BTN_REGISTRAR)),
             WaitUntil.the(MESSAGE_USUARIO_REGISTRADO, isClickable()).forNoMoreThan(20).seconds()
     );
+
+
     }
 
     public static Performable Formulario(List<Usuario> usuario) {
