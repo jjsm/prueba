@@ -13,7 +13,7 @@ Feature: Comprar productos
       Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra y debe ingresar con sus credenciales
         | username  | password |
-        | username4 | Jjsm606  |
+        | username6 | Jjsm606  |
 
     Scenario: el usuario hace la compra
       When el usuario selecciona los productos para pagar
