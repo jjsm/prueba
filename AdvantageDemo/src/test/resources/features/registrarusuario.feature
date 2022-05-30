@@ -21,7 +21,7 @@ Feature: Registrar Usuario
 
       Examples:
         | username  | email           | password | confirm_password | first_name | last_name | phone_number | city     | address        | state     | postal_code |
-        | username4 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Medellin | Transversal 38 | antioquia | 1234567890  |
+        | username6 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Medellin | Transversal 38 | antioquia | 1234567890  |
 
 
 

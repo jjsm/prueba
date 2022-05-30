@@ -11,14 +11,11 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CompraProductosStepDefinitions {
 
-    @When("^el usuario selecciona los productos$")
+    @When("^el usuario selecciona los productos para pagar$")
     public void elUsuarioSeleccionaLosProductos()  {
         theActorInTheSpotlight().attemptsTo(AñadirProductosAl.Carrito());
     }
 
-    @And("^realiza el pago$")
-    public void realizaElPago()  {
-    }
 
     @Then("^el sistema le informa de su compra exitosamente$")
     public void elSistemaLeInformaDeSuCompraExitosamente()  {

@@ -44,7 +44,7 @@ public class RegistrarUsuarioEn implements Task {
             Enter.theValue(usuario.get(0).getFirst_name()).into(InputField.withNameOrId(TXT_LAST_NAME)),
             Enter.theValue(usuario.get(0).getPhone_number()).into(InputField.withNameOrId(TXT_PHONE_NUMBER)),
             Click.on(SLT_COUNTRY),
-            SelectFromOptions.byVisibleText( "Colombia").from(SLT_COUNTRY),
+            SelectFromOptions.byVisibleText("Colombia").from(SLT_COUNTRY),
             Enter.theValue(usuario.get(0).getCity()).into(InputField.withNameOrId(TXT_CITY)),
             Enter.theValue(usuario.get(0).getAddress()).into(InputField.withNameOrId(TXT_ADDRES)),
             Enter.theValue(usuario.get(0).getState()).into(InputField.withNameOrId(TXT_STATE)),

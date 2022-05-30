@@ -16,7 +16,6 @@ Feature: Comprar productos
         | username4 | Jjsm606  |
 
     Scenario: el usuario hace la compra
-      When el usuario selecciona los productos
-      And realiza el pago
+      When el usuario selecciona los productos para pagar
       Then el sistema le informa de su compra exitosamente
 
