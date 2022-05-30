@@ -3,7 +3,7 @@ package co.com.example.screenplay.userinterfaces;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class AñadirCarritoPage {
+public class IngresarCarritoPage {
 
     public static final Target LBL_POPULAR_ITEM = Target.the("opcion para seleccionar item populares").located(By.xpath("//a[contains(text(),'POPULAR ITEMS')]"));
     public static final Target  LBL_PRODUCTO = Target.the("opcion para seleccionar item a comprar").located(By.xpath("//label[@id='details_21']"));

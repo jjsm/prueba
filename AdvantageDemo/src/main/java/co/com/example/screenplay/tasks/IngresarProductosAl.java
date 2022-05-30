@@ -1,15 +1,14 @@
 package co.com.example.screenplay.tasks;
 
-import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static co.com.example.screenplay.userinterfaces.AñadirCarritoPage.*;
+import static co.com.example.screenplay.userinterfaces.IngresarCarritoPage.*;
 
-public class AñadirProductosAl implements Task {
+public class IngresarProductosAl implements Task {
 
 
     @Override
@@ -48,6 +47,6 @@ public class AñadirProductosAl implements Task {
 */
     }
     public static Performable Carrito() {
-        return Tasks.instrumented(AñadirProductosAl.class);    }
+        return Tasks.instrumented(IngresarProductosAl.class);    }
 
 }
