@@ -23,32 +23,34 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class RegistrarUsuarioEn implements Task {
 
-    List<Usuario> usuario;
+    Usuario usuario;
 
-    protected RegistrarUsuarioEn(List<Usuario> usuario){
+    protected RegistrarUsuarioEn(Usuario usuario){
         this.usuario=usuario;
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
+
+
         actor.attemptsTo(
             WaitUntil.the(BTN_PERFILUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
             Click.on(BTN_PERFILUSUARIO),
              WaitUntil.the(BTN_REGISTRARUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
             MoveMouse.to(BTN_REGISTRARUSUARIO),
             Click.on(BTN_REGISTRARUSUARIO),
-            Enter.theValue(usuario.get(0).getUsername()).into(InputField.withNameOrId(TXT_USERNAME)),
-            Enter.theValue(usuario.get(0).getEmail()).into(InputField.withNameOrId(TXT_EMAIL)),
-            Enter.theValue(usuario.get(0).getPassword()).into(InputField.withNameOrId(TXT_PASWORD)),
-            Enter.theValue(usuario.get(0).getConfirm_password()).into(InputField.withNameOrId(TXT_CONFIRM_PASSWORD)),
-            Enter.theValue(usuario.get(0).getFirst_name()).into(InputField.withNameOrId(TXT_FISRT_NAME)),
-            Enter.theValue(usuario.get(0).getFirst_name()).into(InputField.withNameOrId(TXT_LAST_NAME)),
-            Enter.theValue(usuario.get(0).getPhone_number()).into(InputField.withNameOrId(TXT_PHONE_NUMBER)),
+            Enter.theValue(usuario.getUsername()).into(InputField.withNameOrId(TXT_USERNAME)),
+            Enter.theValue(usuario.getEmail()).into(InputField.withNameOrId(TXT_EMAIL)),
+            Enter.theValue(usuario.getPassword()).into(InputField.withNameOrId(TXT_PASWORD)),
+            Enter.theValue(usuario.getConfirm_password()).into(InputField.withNameOrId(TXT_CONFIRM_PASSWORD)),
+            Enter.theValue(usuario.getFirst_name()).into(InputField.withNameOrId(TXT_FISRT_NAME)),
+            Enter.theValue(usuario.getFirst_name()).into(InputField.withNameOrId(TXT_LAST_NAME)),
+            Enter.theValue(usuario.getPhone_number()).into(InputField.withNameOrId(TXT_PHONE_NUMBER)),
             Click.on(SLT_COUNTRY),
             SelectFromOptions.byVisibleText("Colombia").from(SLT_COUNTRY),
-            Enter.theValue(usuario.get(0).getCity()).into(InputField.withNameOrId(TXT_CITY)),
-            Enter.theValue(usuario.get(0).getAddress()).into(InputField.withNameOrId(TXT_ADDRES)),
-            Enter.theValue(usuario.get(0).getState()).into(InputField.withNameOrId(TXT_STATE)),
-            Enter.theValue(usuario.get(0).getPostal_code()).into(InputField.withNameOrId(TXT_POSTAL_CODE)),
+            Enter.theValue(usuario.getCity()).into(InputField.withNameOrId(TXT_CITY)),
+            Enter.theValue(usuario.getAddress()).into(InputField.withNameOrId(TXT_ADDRES)),
+            Enter.theValue(usuario.getState()).into(InputField.withNameOrId(TXT_STATE)),
+            Enter.theValue(usuario.getPostal_code()).into(InputField.withNameOrId(TXT_POSTAL_CODE)),
             Click.on(InputField.withNameOrId(RBT_AGREE)),
             Click.on(Button.withNameOrId(BTN_REGISTRAR)),
             WaitUntil.the(MESSAGE_USUARIO_REGISTRADO, isClickable()).forNoMoreThan(20).seconds()
