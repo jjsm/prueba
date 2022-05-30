@@ -10,13 +10,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_NO_REGISTRADO;
+import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 
 import java.util.List;
 
-import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_REGISTRADO;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
@@ -39,6 +38,12 @@ public class RegistrarUsuarioStepDefinitions {
         theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_REGISTRADO),
                 equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_REGISTRADO));
 
+    }
+
+    @Then("^el sistema no termina de hacer su registro$")
+    public void elSistemaNoTerminaDeHaceSuRegistro(List<String> message) {
+        theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_YA_REGISTRADO),
+                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_REGISTRADO_EXITOSO));
     }
 
 }

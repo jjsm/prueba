@@ -12,6 +12,8 @@ import io.cucumber.java.en.When;
 
 import java.util.List;
 
+import static co.com.example.screenplay.userinterfaces.IngresarCarritoPage.MESSAGE_USUARIO_NO_EXITOSO;
+import static co.com.example.screenplay.userinterfaces.IngresarCarritoPage.MESSAGE_USUARIO_NO_INGRESADO_EXITOSO;
 import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_NO_INGRESADO;
 import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.MESSAGE_USUARIO_REGISTRADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -35,5 +37,13 @@ public class IngresarUsuarioStepDefinitions {
                 equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_INGRESADO));
 
     }
+
+    @Then("el sistema valida el ingreso no exitoso$")
+    public void elSistemaValidaelIngresoNoExitoso(List<String> message) {
+        theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_NO_EXITOSO),
+                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_INGRESADO_EXITOSO));
+
+    }
+
 
 }

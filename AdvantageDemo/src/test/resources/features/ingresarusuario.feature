@@ -11,8 +11,8 @@ Feature: Ingresar Usuario Registrado
     Background:
       Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra para registrarse
-        | username     | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
-        | username10011 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+        | username   | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
+        | username99 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
       And salir del sistema
 
     Scenario Outline: Ingresar Usuario correctamente
@@ -24,5 +24,20 @@ Feature: Ingresar Usuario Registrado
         | <username> |
 
       Examples:
-        | username    | password |
-        | username10011 | Jjsm606  |
+        | username   | password |
+        | username99 | Jjsm606  |
+
+  Rule: Ingresar el usuario con credenciales incorrectas
+
+    Scenario Outline: Ingresar Usuario registrado con password incorrectamente
+      Given El usuario quiere ingresar a la pagina
+      When necesita hacer una compra y debe ingresar con sus credenciales
+        | username   | password   |
+        | <username> | <password> |
+      Then el sistema valida el ingreso no exitoso
+        | message   |
+        | <message> |
+
+      Examples:
+        | username   | password | message                          |
+        | username99 | sdgff    | Incorrect user name or password. |

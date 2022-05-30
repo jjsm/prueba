@@ -26,6 +26,8 @@ public class RegistroUsuarioPage {
 
     public static final String BTN_REGISTRAR= "register_btnundefined";
     public static final Target  MESSAGE_USUARIO_REGISTRADO= Target.the("nombre de usuario registrado").located(By.xpath("//header/nav[1]/ul[1]/li[3]/a[1]/span[1]"));
+    public static final Target  MESSAGE_USUARIO_YA_REGISTRADO= Target.the("mensaje de usuario ya gistrado").located(By.xpath("//body/div[3]/section[1]/article[1]/sec-form[1]/div[2]/label[1]"));
+    public static final String MESSAGE_USUARIO_NO_REGISTRADO_EXITOSO="Usuario creado que ya existia";
     public static final String MESSAGE_USUARIO_NO_REGISTRADO="Usuario no registrado correctamente";
     public static final String MESSAGE_USUARIO_NO_INGRESADO= "No se ingreso correctamente";
     public static final String  TXT_USERNAMELOGIN = "username";

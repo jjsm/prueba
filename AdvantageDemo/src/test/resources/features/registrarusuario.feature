@@ -8,9 +8,7 @@ Feature: Registrar Usuario
 
 
   Rule: Registrar el usuario con todos los campos requeridos
-
-
-    Scenario Outline: Registrar Usuario
+    Scenario Outline: Registrar Usuario nuevo
       Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra para registrarse
         | username   | email   | password   | confirm_password   | first_name   | last_name   | phone_number   | country   | city   | address   | state   | postal_code   |
@@ -20,8 +18,23 @@ Feature: Registrar Usuario
         | <username> |
 
       Examples:
-        | username      | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
-        | username10012 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+        | username       | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
+        | usernamex10012 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+
+  Rule: Registrar el usuario con todos los campos requeridos repitiendo nombre de  usuario
+    Scenario Outline: Registrar Usuario repetido
+      Given El usuario quiere ingresar a la pagina
+      When necesita hacer una compra para registrarse
+        | username   | email   | password   | confirm_password   | first_name   | last_name   | phone_number   | country   | city   | address   | state   | postal_code   |
+        | <username> | <email> | <password> | <confirm_password> | <first_name> | <last_name> | <phone_number> | <country> | <city> | <address> | <state> | <postal_code> |
+      Then el sistema no termina de hacer su registro
+        | message   |
+        | <message> |
+
+      Examples:
+        | username       | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code | message                  |
+        | usernamex10012 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  | User name already exists |
+
 
 
 

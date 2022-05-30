@@ -19,4 +19,6 @@ public class IngresarCarritoPage {
     public static final String BTN_PAY_SAFEPAY="pay_now_btn_SAFEPAY";
     public static final Target LBL_MENSAJE_COMPRA_EXITOSA= Target.the("elemento que contiene el mensaje de pago exitoso").located(By.xpath("//h3[contains(text(),'ORDER PAYMENT')]"));
     public static final String  LBL_MENSAJE_COMPRA_NO_EXITOSA="No se hizo correctamente la compra";
+    public static final Target MESSAGE_USUARIO_NO_EXITOSO = Target.the("mensaje por error de ingreso de credenciales").located(By.id("signInResultMessage"));
+    public static final String MESSAGE_USUARIO_NO_INGRESADO_EXITOSO ="El sistema no valido el ingreso correcto de credenciales";
 }
