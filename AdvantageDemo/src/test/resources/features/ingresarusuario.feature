@@ -8,10 +8,14 @@ Feature: Ingresar Usuario Registrado
 
 
   Rule: Ingresar el usuario con credenciales correctas
-
+    Background:
+      Given El usuario quiere ingresar a la pagina
+      When necesita hacer una compra para registrarse
+        | username     | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
+        | username10011 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+      And salir del sistema
 
     Scenario Outline: Ingresar Usuario correctamente
-      Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra y debe ingresar con sus credenciales
         | username   | password   |
         | <username> | <password> |
@@ -21,4 +25,4 @@ Feature: Ingresar Usuario Registrado
 
       Examples:
         | username    | password |
-        | username100 | Jjsm606  |
+        | username10011 | Jjsm606  |
