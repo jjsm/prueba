@@ -2,7 +2,7 @@
 Un proyecto donde se utiliza del patrón serenity 
 [screenplay](http://thucydides.info/docs/serenity-staging/#_serenity_and_the_screenplay_pattern) con cucumber y gradle.
 
-Las pruebas  se corren contra la página web de [AdvantageDemo](www.advantageonlineshopping.com).
+Las pruebas  se corren contra la página web de [AdvantageDemo](http://www.advantageonlineshopping.com) .
 
 Automatización de las transacciones de regresión y E2E del aplicativo AdvantageDemo en el menu POPULR ITEM agregando items al carro para realizar compras.
 
