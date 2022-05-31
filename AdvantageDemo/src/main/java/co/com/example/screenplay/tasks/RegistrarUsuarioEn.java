@@ -31,10 +31,10 @@ public class RegistrarUsuarioEn implements Task {
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-
+        utilidadTiempo.esperar(5);
         actor.attemptsTo(
-            WaitUntil.the(BTN_PERFILUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
+            WaitUntil.the(BTN_PERFILUSUARIO, isVisible()).forNoMoreThan(20).seconds(),
+                WaitUntil.the(BTN_PERFILUSUARIO, isCurrentlyVisible()).forNoMoreThan(10).seconds(),
             Click.on(BTN_PERFILUSUARIO),
              WaitUntil.the(BTN_REGISTRARUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
             MoveMouse.to(BTN_REGISTRARUSUARIO),
@@ -55,8 +55,7 @@ public class RegistrarUsuarioEn implements Task {
             Enter.theValue(usuario.get(0).getState()).into(InputField.withNameOrId(TXT_STATE)),
             Enter.theValue(usuario.get(0).getPostal_code()).into(InputField.withNameOrId(TXT_POSTAL_CODE)),
             Click.on(InputField.withNameOrId(RBT_AGREE)),
-            Click.on(Button.withNameOrId(BTN_REGISTRAR)),
-            WaitUntil.the(MESSAGE_USUARIO_REGISTRADO, isClickable()).forNoMoreThan(20).seconds()
+            Click.on(Button.withNameOrId(BTN_REGISTRAR))
     );
 
 

@@ -18,6 +18,7 @@ import java.util.List;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 
@@ -43,7 +44,7 @@ public class RegistrarUsuarioStepDefinitions {
     @Then("^el sistema no termina de hacer su registro$")
     public void elSistemaNoTerminaDeHaceSuRegistro(List<String> message) {
         theActorInTheSpotlight().should(seeThat(GetText.ofTarget(MESSAGE_USUARIO_YA_REGISTRADO),
-                equalTo(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_REGISTRADO_EXITOSO));
+                containsString(message.get(1))).orComplainWith(AssertionsErrors.class, MESSAGE_USUARIO_NO_REGISTRADO_EXITOSO));
     }
 
 }

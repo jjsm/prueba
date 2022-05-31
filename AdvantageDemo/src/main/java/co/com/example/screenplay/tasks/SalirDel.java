@@ -1,5 +1,6 @@
 package co.com.example.screenplay.tasks;
 
+import co.com.example.screenplay.util.utilidadTiempo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -18,6 +19,7 @@ public class SalirDel implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        utilidadTiempo.esperar(5);
     actor.attemptsTo(
             WaitUntil.the(BTN_PERFILUSUARIO, isClickable()).forNoMoreThan(30).seconds(),
             Click.on(BTN_PERFILUSUARIO),

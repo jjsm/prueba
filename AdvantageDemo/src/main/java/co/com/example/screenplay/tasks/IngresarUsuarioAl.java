@@ -2,6 +2,7 @@ package co.com.example.screenplay.tasks;
 
 
 import co.com.example.screenplay.models.Usuario;
+import co.com.example.screenplay.util.utilidadTiempo;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
@@ -18,6 +19,7 @@ import java.util.List;
 
 import static co.com.example.screenplay.userinterfaces.RegistroUsuarioPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
 public class IngresarUsuarioAl implements Task {
@@ -29,8 +31,9 @@ public class IngresarUsuarioAl implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        utilidadTiempo.esperar(5);
         actor.attemptsTo(
-                WaitUntil.the(BTN_PERFILUSUARIO, isClickable()).forNoMoreThan(20).seconds(),
+                WaitUntil.the(BTN_PERFILUSUARIO, isVisible()).forNoMoreThan(20).seconds(),
                 Click.on(BTN_PERFILUSUARIO),
                 Enter.theValue(usuario.get(0).getUsername()).into(InputField.withNameOrId(TXT_USERNAMELOGIN)),
                 Enter.theValue(usuario.get(0).getPassword()).into(InputField.withNameOrId(TXT_PASSWORDLOGIN)),

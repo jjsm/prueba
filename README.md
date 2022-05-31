@@ -75,6 +75,7 @@ Para ejecutar el proyecto de automatización se requiere:
 
 clean test aggregate es el comando que correr todos  los tests y generará el reporte en la carpeta /target/site/serenity/
 clean test --tests NOMBRE_RUNNEER aggregate correr un escenario en especifico
+En la carpeta  resources/feature cambiar el dato de prueba  username por el mismo, pudiendo ser diferentes en cada feature pero igual en el mismo feature
  
 ## Class ParameterType - stepDefinitions
 

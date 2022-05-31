@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class RegistroUsuarioPage {
 
-    public static final Target BTN_PERFILUSUARIO = Target.the("Boton para ingresar perfil usuario ").located(By.id("menuUserLink"));
+    public static final Target BTN_PERFILUSUARIO = Target.the("Boton para ingresar perfil usuario ").located(By.xpath("//body[1]/header[1]/nav[1]/ul[1]/li[3]"));
     public static final Target BTN_REGISTRARUSUARIO = Target.the("Boton para iregistrar usuario ").located(By.xpath("//a[contains(text(),'CREATE NEW ACCOUNT')]"));
     public static final Target  BTN_SIGNOUT = Target.the("Boton para salir de sesion ").located(By.xpath("//header/nav[1]/ul[1]/li[3]/a[1]/div[1]/label[3]"));
 
@@ -26,7 +26,7 @@ public class RegistroUsuarioPage {
 
     public static final String BTN_REGISTRAR= "register_btnundefined";
     public static final Target  MESSAGE_USUARIO_REGISTRADO= Target.the("nombre de usuario registrado").located(By.xpath("//header/nav[1]/ul[1]/li[3]/a[1]/span[1]"));
-    public static final Target  MESSAGE_USUARIO_YA_REGISTRADO= Target.the("mensaje de usuario ya gistrado").located(By.xpath("//body/div[3]/section[1]/article[1]/sec-form[1]/div[2]/label[1]"));
+    public static final Target  MESSAGE_USUARIO_YA_REGISTRADO= Target.the("mensaje de usuario ya gistrado").located(By.xpath("//label[contains(text(),'I agree to the www.AdvantageOnlineShopping.com Con')]"));
     public static final String MESSAGE_USUARIO_NO_REGISTRADO_EXITOSO="Usuario creado que ya existia";
     public static final String MESSAGE_USUARIO_NO_REGISTRADO="Usuario no registrado correctamente";
     public static final String MESSAGE_USUARIO_NO_INGRESADO= "No se ingreso correctamente";
