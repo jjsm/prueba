@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Comprar productos","el usuario hace la compra","SUCCESS","2022-05-31T00:11:41.5514421-05:00[America/Bogota]","0.0","136.71"
+"Ingresar Usuario Registrado","Ingresar Usuario correctamente","SUCCESS","2022-05-31T00:14:20.7680162-05:00[America/Bogota]","0.0","127.78"
+"Ingresar Usuario Registrado","Ingresar Usuario registrado con password incorrectamente","SUCCESS","2022-05-31T00:16:28.5771592-05:00[America/Bogota]","0.0","27.42"
+"Registrar Usuario","Registrar Usuario nuevo","SUCCESS","2022-05-31T00:17:01.6908348-05:00[America/Bogota]","0.0","95.53"
+"Registrar Usuario","Registrar Usuario repetido","SUCCESS","2022-05-31T00:18:37.2431227-05:00[America/Bogota]","0.0","92.55"

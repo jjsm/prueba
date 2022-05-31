@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Registrar Usuario","Registrar Usuario nuevo","SUCCESS","2022-05-31T00:17:01.6908348-05:00[America/Bogota]","0.0","95.53"
+"Registrar Usuario","Registrar Usuario repetido","SUCCESS","2022-05-31T00:18:37.2431227-05:00[America/Bogota]","0.0","92.55"

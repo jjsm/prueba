@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">"AdvantageDemo"</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="11439a9258ce7ae35d8e565bd3eacf0bbb93457c32b933541b3dc22197b9eeda.html">Comprar Productos</a></span>
+                > <span class="truncate-60"><a
+                    href="b5b5c799fbcd2b6d99afcf3cf6071ee8ca56af30c650bcdab04d6c5611ddbb8f.html">el usuario hace la compra </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-05-2022 00:11</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Comprar Productos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario<br />
+Yo quiero seleccionar un producto<br />
+para hacer la compra
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="fc7a07378b2fab0c65528f9414beb31024bf0fb985e1d0ae6f66a39b84c9f66a.html">John Soto
+                                    (Author)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">el usuario hace la compra
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ccee3ce00b5e9a9f649513c1047b4cc7239699ec6875f6a50eb195551fb49b33.png" title=" Given El usuario quiere ingresar a la pagina" width="1366"/>
+                <img src="ccee3ce00b5e9a9f649513c1047b4cc7239699ec6875f6a50eb195551fb49b33.png" title=" John navigate to" width="1366"/>
+                <img src="ccee3ce00b5e9a9f649513c1047b4cc7239699ec6875f6a50eb195551fb49b33.png" title=" John opens the pages.Url page" width="1366"/>
+                <img src="085480923888b721c67d40a2a0e7d1ffdcc3bb3c0434fadb44a8773e4f52a320.png" title=" John navigate to (completed)" width="1366"/>
+                <img src="9ed5ad67b85476b6ffc4b5fb6acd53d0e362064fe17ca78573e6f265804f4f69.png" title=" Given El usuario quiere ingresar a la pagina (completed)" width="1366"/>
+                <img src="7ba685a4ca641bc0659adc8b718c58a92101da9ad3c564963fc5560f15547bb6.png" title=" When necesita hacer una compra para registrarse
+| username | email | password | confirm_password | first_name | last_name | phone_number | country | city | address | state | postal_code |
+| user800808081 | email@email.com | Jjsm606 | Jjsm606 | John | Soto | 3206457046 | Colombia | Medellin | Transversal 38 | antioquia | 1234567890 |" width="1366"/>
+                <img src="7ba685a4ca641bc0659adc8b718c58a92101da9ad3c564963fc5560f15547bb6.png" title=" John registrar usuario en" width="1366"/>
+                <img src="7ba685a4ca641bc0659adc8b718c58a92101da9ad3c564963fc5560f15547bb6.png" title=" John clicks on Boton para ingresar perfil usuario " width="1366"/>
+                <img src="7a2887eab5e1ef7a402d597ecfbcc30dd7ab98101283c14cf6eb4a9524ae793b.png" title=" John clicks on Boton para iregistrar usuario " width="1366"/>
+                <img src="c85713851c4bf4d517394be4c630696e4814ab37910f716932fac93b5274c895.png" title=" John enters 'user800808081' into the 'usernameRegisterPage' input field" width="1366"/>
+                <img src="e401c1391cee8cb04800a5d5fe0f3e44c0f424026b6ca3f3e878012ea97a2e6c.png" title=" John enters 'email@email.com' into the 'emailRegisterPage' input field" width="1366"/>
+                <img src="47a3f7d1d2fd63f021dca872545f3c9ed36d210ae4ad338b893d5cd375caf136.png" title=" John enters 'Jjsm606' into the 'passwordRegisterPage' input field" width="1366"/>
+                <img src="362a3c291e7b15e85fd3dd8404cd9c39f7a9d4c20e9033d7935fb19389076779.png" title=" John enters 'Jjsm606' into the 'confirm_passwordRegisterPage' input field" width="1366"/>
+                <img src="c6729ee23a3cbe9d110f0b9c6ded4ef163e01effebcc9a9e3ea5804b76557cd3.png" title=" John enters 'John' into the 'first_nameRegisterPage' input field" width="1366"/>
+                <img src="ebfa00c878af6eacf8e2a3e9db0392ace02b0616715be236b864a0b725ea0286.png" title=" John enters 'John' into the 'last_nameRegisterPage' input field" width="1366"/>
+                <img src="aecefe465d3059abe4a46385fa0e84f2ac173d73dfca4de2bd3b5e8706214391.png" title=" John enters '3206457046' into the 'phone_numberRegisterPage' input field" width="1366"/>
+                <img src="be61cc42ab4740e5eccdbd02a8fb65a45821cff6a707d2c1fc8acd368812d642.png" title=" John clicks on campo para ingresar el pais " width="1366"/>
+                <img src="6308e701fe24ae28ea1ed87bb3c8b06d539e2b9e7f46803594ad5c2756155836.png" title=" John clicks on campo para ingresar el pais " width="1366"/>
+                <img src="79e497117c24c822ceb36c3466d8e4a48bce64932ae9309c300c8bb19a1a1041.png" title=" John selects Colombia on campo para ingresar el pais " width="1366"/>
+                <img src="6a5bea9fe6c7f894e9827b4d2a7fbf8459ca087b0faf296af67eb90b5c5d7625.png" title=" John enters 'Medellin' into the 'cityRegisterPage' input field" width="1366"/>
+                <img src="f0842ff1ef64924a5b357edb4fda3d0c36681e3de0cb1efa0c76d342471b03ea.png" title=" John enters 'Transversal 38' into the 'addressRegisterPage' input field" width="1366"/>
+                <img src="824b26ad32f4039a74b6c651757d96a73d58a0d665675ff79491a24dc0648e6d.png" title=" John enters 'antioquia' into the 'state_/_province_/_regionRegisterPage' input field" width="1366"/>
+                <img src="a26fd152fb4da3e78b733af68b127a4b2a507605baebd5731c344bc7c95e610b.png" title=" John enters '1234567890' into the 'postal_codeRegisterPage' input field" width="1366"/>
+                <img src="1755fab94e78981aacb21b4cc66b7c8da079e5707d7c2d7d2174f55a7f8752e9.png" title=" John clicks on the 'i_agree' input field" width="1366"/>
+                <img src="c686d3928aee90c1ec974ca912a4e12d73f8e82e9aa91ea939131768bc139649.png" title=" John clicks on 'register_btnundefined' button" width="1366"/>
+                <img src="2e69cbe8f55446d791e4036d31c1a412856010412a8d2710dec82d44fd66c632.png" title=" John registrar usuario en (completed)" width="1366"/>
+                <img src="76b363d889e223faf88444159c8c3486e02957993d56c6f048cd4535d814124a.png" title=" When necesita hacer una compra para registrarse
+| username | email | password | confirm_password | first_name | last_name | phone_number | country | city | address | state | postal_code |
+| user800808081 | email@email.com | Jjsm606 | Jjsm606 | John | Soto | 3206457046 | Colombia | Medellin | Transversal 38 | antioquia | 1234567890 | (completed)" width="1366"/>
+                <img src="d3144b42ffc1520c25cf74c4d72a3b8b100798fbf68d944c63e6f134e705326c.png" title=" When el usuario selecciona los productos para pagar" width="1366"/>
+                <img src="d3144b42ffc1520c25cf74c4d72a3b8b100798fbf68d944c63e6f134e705326c.png" title=" John ingresar productos al" width="1366"/>
+                <img src="d3144b42ffc1520c25cf74c4d72a3b8b100798fbf68d944c63e6f134e705326c.png" title=" John clicks on opcion para seleccionar item populares" width="1366"/>
+                <img src="1fdc4720bba93aa964e8c17de70c92badaa71a477a79ed7103ca7e99ea51cac7.png" title=" John clicks on opcion para seleccionar item a comprar" width="1366"/>
+                <img src="134f3be6e89101435f0e76a1e52fec81c412b3ae507f927e4100c5bf892fb7aa.png" title=" John clicks on opcion para seleccionar color" width="1366"/>
+                <img src="6e2ce6eb5554d7ddf00ba72de492a8c111bed33210a19723dce06222bc8bbd27.png" title=" John clicks on 'save_to_cart' button" width="1366"/>
+                <img src="7412ffcc8c8b639d66f9897c95032b57fde67624382f9a46e9ef733445d19538.png" title=" John clicks on opcion para a&Atilde;&plusmn;adir al carrito" width="1366"/>
+                <img src="94fb68c610af73dee6447a43a4cc58cb5d1671ef440449ee812779eec76fa33e.png" title=" John clicks on 'checkOutButton' button" width="1366"/>
+                <img src="3a5aec2f74b8907f8702e3592f8d34bbb3dfd9ff610b778278a1c23ae8c0713f.png" title=" John clicks on 'next_btn' button" width="1366"/>
+                <img src="1bd4c8f7b2b656203a95b1de1446c4185f640d90fa1cded922e7a2c9690f1dbc.png" title=" John enters 'mMjs606' into the 'safepay_username' input field" width="1366"/>
+                <img src="f168ccf4ce47ed7c3edc001608d07b8e8f1448b593a45a1330870776370caeac.png" title=" John enters 'Jjsm606' into the 'safepay_password' input field" width="1366"/>
+                <img src="1ee1d0296380f7d96cb4d53b2682b3956f92a699e2dbbb36535ce59a8e34ded9.png" title=" John clicks on 'pay_now_btn_SAFEPAY' button" width="1366"/>
+                <img src="314560637467f59a41a9e6d1c5c5908302c57b27ea123bf58b25ee9d4c241e08.png" title=" John ingresar productos al (completed)" width="1366"/>
+                <img src="314560637467f59a41a9e6d1c5c5908302c57b27ea123bf58b25ee9d4c241e08.png" title=" When el usuario selecciona los productos para pagar (completed)" width="1366"/>
+                <img src="7c0dd321117f475f01828e660abe771a9e95b2c554cba0d40003e25c01c54da7.png" title=" Then el sistema le informa de su compra exitosamente
+| message |
+| ORDER PAYMENT |" width="1366"/>
+                <img src="7c0dd321117f475f01828e660abe771a9e95b2c554cba0d40003e25c01c54da7.png" title=" Then get text$ byte buddy$r ztfdf nm should be 'ORDER PAYMENT'" width="1366"/>
+                <img src="7c0dd321117f475f01828e660abe771a9e95b2c554cba0d40003e25c01c54da7.png" title=" Then el sistema le informa de su compra exitosamente
+| message |
+| ORDER PAYMENT | (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.1</span>
+</div>
+</body>
+</html>
