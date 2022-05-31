@@ -7,7 +7,7 @@
 # Intellij
 *.idea*
 */history/
-*/target/
+
 *.iml
 *.iws
 
