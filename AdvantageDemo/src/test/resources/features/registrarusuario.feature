@@ -18,8 +18,8 @@ Feature: Registrar Usuario
         | <username> |
 
       Examples:
-        | username     | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
-        | user77770707 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+        | username      | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
+        | user777707071 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
 
   Rule: Registrar el usuario con todos los campos requeridos repitiendo nombre de  usuario
     Scenario Outline: Registrar Usuario repetido
@@ -32,5 +32,5 @@ Feature: Registrar Usuario
         | <message> |
 
       Examples:
-        | username     | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code | message                                                                             |
-        | user77770707 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  | I agree to the www.AdvantageOnlineShopping.com Conditions of Use and Privacy Notice |
+        | username      | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code | message                                                                             |
+        | user777707071 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  | I agree to the www.AdvantageOnlineShopping.com Conditions of Use and Privacy Notice |

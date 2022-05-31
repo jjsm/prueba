@@ -12,8 +12,8 @@ Feature: Comprar productos
     Background:
       Given El usuario quiere ingresar a la pagina
       When necesita hacer una compra para registrarse
-        | username     | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
-        | user80080808 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
+        | username      | email           | password | confirm_password | first_name | last_name | phone_number | country  | city     | address        | state     | postal_code |
+        | user800808081 | email@email.com | Jjsm606  | Jjsm606          | John       | Soto      | 3206457046   | Colombia | Medellin | Transversal 38 | antioquia | 1234567890  |
 
     Scenario: el usuario hace la compra
       When el usuario selecciona los productos para pagar
